@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif, "Roboto", "Barlow Semi Condensed";
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    background: hsl(229, 57%, 11%) url(../images/bg-desktop.png) no-repeat bottom right;
+    background-size: 100% 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main class --> folder */
+.folder {
+    width: min(max(60vw), 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+/* Folder Box */
+.folder_box {
+    width: min(max(35%), 25%);
+    height: 120px;
+    padding: 30px;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 100px;
+    gap: 2.5em;
+    align-self: flex-end;
+}
+
+/* icons */
+.folder_box .folder_icons {
+    display: flex;
+    gap: 1.5em;
+}
+
+.folder_box .img {
+    background-color: hsl(229, 57%, 11%);
+    border: 13px solid hsl(229, 57%, 11%);
+    border-radius: 10px;
+}
+
+/* Storage Box */
+.storage_box {
+    width: min(max(60%), 50%);
+    display: flex;
+    flex-direction: column;
+}
+
+/* storage_container */
+.storage_container {
+    align-items: baseline;
+    height: 80px;
+    padding: 30px;
+    background-color: hsl(228, 56%, 26%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    border-radius: 15px;
+}
+
+.storage_used {
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+.used {
+    font-weight: 700;
+}
+
+/* Storage line indicate */
+.storage_line {
+    width: 100%;
+    height: 20px;
+    background: hsl(230, 67%, 15%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.storage_indicate {
+    width: 80%;
+    height: 16px;
+    border-radius: 150px;
+    background: linear-gradient(to right,
+            hsl(6, 100%, 80%),
+            hsl(335, 100%, 65%));
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.ball {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 100%;
+    margin-right: 2px;
+}
+
+/* 0 GB to 1000 GB */
+.gb_indicate {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+.thousand_gb {
+    position: absolute;
+    align-self: flex-end;
+}
+
+
+
+/* Storage Left 185GB Left*/
+.storage_left {
+    align-self: flex-end;
+    width: min(max(100%), 160px);
+    height: 60px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    position: relative;
+    right: 30px;
+    top: 15px;
+}
+
+.left {
+    color: #222;
+    font-size: 2.5em;
+}
+
+.gb_left {
+    position: relative;
+    bottom: 5px;
+    margin-left: 10px;
+    color: #222;
+    opacity: 0.7;
+}
+
+/*  */
+.storage_left::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid white;
+    border-top: 15px solid white;
+}
+
+/* 1740px */
+@media (max-width:1740px) {
+
+    /* Main class --> folder */
+    .folder {
+        width: min(max(70vw), 60%);
+    }
+
+    /* Folder Box */
+    .folder_box {
+        width: min(max(30%), 25%);
+    }
+
+    /* Storage Box */
+    .storage_box {
+        width: min(max(60%), 50%);
+    }
+}
+
+/* 1440 */
+@media (max-width:1440px) {
+
+    /* Main class --> folder */
+    .folder {
+        width: min(max(70vw), 60%);
+    }
+
+    /* Folder Box */
+    .folder_box {
+        width: min(max(40vw), 30%);
+    }
+
+    /* Storage Box */
+    .storage_box {
+        width: min(max(65vw), 60%);
+    }
+}
+
+/* 1200px */
+@media (max-width:1200px) {
+
+    /* Main class --> folder */
+    .folder {
+        width: min(max(75vw), 70%);
+    }
+
+    /* Folder Box */
+    .folder_box {
+        width: min(max(40vw), 30%);
+    }
+
+    /* Storage Box */
+    .storage_box {
+        width: min(max(70vw), 55%);
+    }
+}
+
+/* 1000px */
+@media (max-width:1200px) {
+
+    /* Main class --> folder */
+    .folder {
+        width: min(max(80vw), 90%);
+    }
+
+    /* Folder Box */
+    .folder_box {
+        width: min(max(40vw), 30%);
+    }
+
+    /* Storage Box */
+    .storage_box {
+        width: min(max(70vw), 55%);
+    }
+}
+
+/* 900px */
+@media (max-width:900px) {
+
+    /* Main class --> folder */
+    .folder {
+        width: min(max(100vw), 100%);
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    /* Folder Box */
+    .folder_box {
+        width: min(max(100vw), 50%);
+        align-self: center;
+    }
+
+    /* Storage Box */
+    .storage_box {
+        width: min(max(100vw), 57%);
+        height: 180px;
+        display: grid;
+        grid-template-columns: repeat(4, 0.5fr);
+        grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr;
+    }
+
+    /* storage_container */
+    .storage_container {
+        height: 120px;
+        grid-column: 1/ span 4;
+        grid-row: 1/ span 4;
+        align-items: center;
+    }
+
+    .storage_left {
+        width: min(max(100%), 160px);
+        height: 60px;
+        grid-column: 2 / span 2;
+        grid-row: 4 / span 2;
+        align-self: center;
+        justify-self: center;
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+
+    /*  */
+    .storage_left::before {
+        content: "";
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+}
+
+/* 640px */
+@media (max-width:640px) {
+
+    /* Main class --> folder */
+    .folder {
+        width: min(max(100vw), 100%);
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    /* Folder Box */
+    .folder_box {
+        width: min(max(100vw), 75%);
+        align-self: center;
+    }
+
+    /* Storage Box */
+    .storage_box {
+        width: min(max(100vw), 83%);
+        height: 180px;
+        display: grid;
+        grid-template-columns: repeat(4, 0.5fr);
+        grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr;
+    }
+
+    /* storage_container */
+    .storage_container {
+        height: 120px;
+        grid-column: 1/ span 4;
+        grid-row: 1/ span 4;
+        align-items: center;
+    }
+
+    .storage_left {
+        width: min(max(100%), 160px);
+        height: 60px;
+        grid-column: 2 / span 2;
+        grid-row: 4 / span 2;
+        align-self: center;
+        justify-self: center;
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+
+    /*  */
+    .storage_left::before {
+        content: "";
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+}
+
+/* 376px */
+@media (max-width:376px) {
+
+    /* Body */
+    body {
+        /* min-height: 100vh; */
+        background: url(../images/bg-mobile.png);
+    }
+
+    /* Main class --> folder */
+    .folder {
+        width: min(max(100vw), 90%);
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    /* Folder Box */
+    .folder_box {
+        width: min(max(100%), 80%);
+        align-self: center;
+    }
+
+    /* Storage Box */
+    .storage_box {
+        width: min(max(100%), 100%);
+        height: 180px;
+        display: grid;
+        grid-template-columns: repeat(4, 0.5fr);
+        grid-template-rows: 1fr 0.5fr 0.5fr;
+        gap: 2em;
+    }
+
+    /* storage_container */
+    .storage_container {
+        height: 110px;
+        align-items: center;
+        justify-content: center;
+        grid-column: 1/ span 4;
+        grid-row: 1/ span 3;
+        align-items: center;
+    }
+
+    .storage_left {
+        width: min(max(100%), 160px);
+        height: 60px;
+        grid-column: 2 / span 2;
+        grid-row: 3;
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+
+    /*  */
+    .storage_left::before {
+        content: "";
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+}
